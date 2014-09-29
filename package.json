@@ -10,10 +10,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/skibish/hubot-weather"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/skibish/hubot-weather/issues"
   },
   "main": "index.coffee"
 }

@@ -1,0 +1,19 @@
+{
+  "name": "hubot-weather",
+  "description": "Hubot script to show weather for some city",
+  "version": "1.0.0",
+  "author": "Sergey Kibish <sergey.kibish@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "main": "index.coffee"
+}

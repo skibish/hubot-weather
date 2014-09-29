@@ -14,7 +14,7 @@ Run ```npm install``` command and you are ready to go!
 #Example
 
 ```
-hubot weather in New York
+hubot weather in Riga
 ```
 
 Reply:

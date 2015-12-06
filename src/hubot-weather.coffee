@@ -14,14 +14,10 @@
 #   skibish
 
 module.exports = (robot) ->
-
-  APIKEY = process.env.HUBOT_OWM_APIKEY or null
-
-  if APIKEY == null
-    msg.send "HUBOT_OWM_APIKEY environment varibale is not provided for hubot-weather"
-    break
-
   robot.respond /weather in (.*)/i, (msg) ->
+    APIKEY = process.env.HUBOT_OWM_APIKEY or null
+    if APIKEY == null
+      msg.send "HUBOT_OWM_APIKEY environment varibale is not provided for hubot-weather"
     msg.http("http://api.openweathermap.org/data/2.5/weather?q=#{msg.match[1]}&units=metric&APPID=#{APIKEY}")
       .header('Accept', 'application/json')
       .get() (err, res, body) ->

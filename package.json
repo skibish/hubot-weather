@@ -1,7 +1,7 @@
 {
   "name": "hubot-weather",
   "description": "Hubot script to show weather for some city",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Sergey Kibish <sergey.kibish@gmail.com>",
   "license": "MIT",
   "keywords": [

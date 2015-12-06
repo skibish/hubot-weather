@@ -5,7 +5,7 @@
 #   None
 #
 # Configuration:
-#   None
+#   HUBOT_OWM_APIKEY: required, openweathermap API key
 #
 # Commands:
 #   hubot weather in <city> - Show today forecast for interested city.
@@ -14,8 +14,15 @@
 #   skibish
 
 module.exports = (robot) ->
+
+  APIKEY = process.env.HUBOT_OWM_APIKEY or null
+
+  if APIKEY == null
+    msg.send "HUBOT_OWM_APIKEY environment varibale is not provided for hubot-weather"
+    break
+
   robot.respond /weather in (.*)/i, (msg) ->
-    msg.http("http://api.openweathermap.org/data/2.5/weather?q=#{msg.match[1]}&units=metric")
+    msg.http("http://api.openweathermap.org/data/2.5/weather?q=#{msg.match[1]}&units=metric&APPID=#{APIKEY}")
       .header('Accept', 'application/json')
       .get() (err, res, body) ->
         data = JSON.parse(body)

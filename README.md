@@ -1,4 +1,5 @@
 Hubot Weather
+[![npm](https://img.shields.io/npm/dt/hubot-weather.svg)]()
 =========
 
 Hubot script to show weather for some city.
